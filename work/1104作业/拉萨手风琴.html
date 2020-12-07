@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 950px;
+            background: url("images/bg.jpg") center;
+        }
+
+        .main {
+            margin: auto;
+            /* padding-top: 100px; */
+            width: 1089px;
+            height: 429px;
+            /* background: lightblue; */
+            overflow: hidden;
+            position: relative;
+            top: 150px;
+        }
+
+        li {
+            width: 100px;
+            height: 100%;
+            background-color: lightcoral;
+            float: left;
+            position: relative;
+            left: 0;
+            top: 0;
+            /* transition: 0.5s; */
+        }
+
+        li div {
+            width: 100px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            /* line-height: 429px; */
+            position: absolute;
+            color: white;
+            left: 0;
+            top: 0;
+        }
+
+        span {
+            margin: 0 auto;
+            display: block;
+            width: 20px;
+            /* line-height: 20px; */
+            /* vertical-align: middle; */
+        }
+
+        li:first-child {
+            width: 789px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="main">
+            <li>
+                <img src="./images/1.jpg" alt="">
+                <div><span>我的个人拉萨之旅--故事之旅</span></div>
+            </li>
+            <li>
+                <img src="./images/2.jpg" alt="">
+                <div><span>我的个人拉萨之旅--故事之旅</span></div>
+            </li>
+            <li>
+                <img src="./images/3.jpg" alt="">
+                <div><span>我的个人拉萨之旅--故事之旅</span></div>
+            </li>
+            <li>
+                <img src="./images/4.jpg" alt="">
+                <div><span>我的个人拉萨之旅--故事之旅</span></div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("li").mouseover(function () {
+            $("li").stop()
+            $(this).siblings("li").animate({ "width": "100px" })
+            $(this).animate({ "width": "789px" })
+            // $(this).css("width", 789).siblings("li").css("width", 100)
+        })
+    </script>
+</body>
+
+</html>

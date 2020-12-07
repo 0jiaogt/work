@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" rel="stylesheet">
+    <style>
+        div {
+            margin: 50px auto;
+            width: 500px;
+            text-align: center;
+        }
+
+        .xiangji:hover {
+            color: skyblue
+        }
+
+        input[type="text"] {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <input type="text">
+        <input type="button" value="百度一下">
+        <i class="fa fa-camera xiangji"></i>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        // $.ajax({
+        //     url: "http://suggestion.baidu.com/su",
+        //     type: "get",
+        //     data: {
+        //         wd: "你好",
+        //     },
+        //     dataType: "jsonp",
+        //     success: function (result) {
+        //         console.log(result);
+        //     }
+        // })
+        function getMessage(data) {
+            console.log(data.s);
+            // data.s.forEach(function(item,index){
+            //     console.log(item);
+            // })
+        }
+        document.querySelector("input[type=\"text\"]").oninput = function () {
+            var str = this.value
+            $.ajax({
+                url: "http://suggestion.baidu.com/su",
+                type: "get",
+                data: {
+                    wd: str,
+                },
+                // dataType属性告诉ajax你要发起jsonp请求
+                dataType: "jsonp",
+                // 默认是参数名称是callback,jQuery会生成一个随机的函数名称jQuery3510802804157252434_1605667877958
+                // 可以通过jsonp修改callback参数名称
+                jsonp: "cb",
+                // 指定函数名称   如果修改函数名称以后,我们就不需要写success的回调函数,但是自定义一个函数名称对应的函数
+                jsonpCallback: "getMessage"
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>

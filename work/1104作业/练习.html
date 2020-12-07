@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 300px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        
+        /* $("div").mouseover(function(){
+            // 给div添加类名
+            $(this).addClass("current");
+        })
+
+        $("div").mouseout(function(){
+            // 给div删除类名
+            $(this).removeClass("current");
+        }) */
+
+        // hover()第一种语法
+        // $("div").hover(鼠标移上对应的函数,  鼠标移出对应的函数)
+
+        /* $("div").hover(function(){
+            // 给div添加类名
+            $(this).addClass("current");
+        },  function(){
+            // 给div删除类名
+            $(this).removeClass("current");
+        }) */
+
+        // hover()第一种语法
+        // hover(只写一个函数)  那么鼠标移上跟鼠标移出触发这个函数各一次
+        /* $("div").hover(function(){
+            console.log( 666666 );
+        }) */
+
+        $("div").hover(function(){// 给div切换类名
+            $(this).toggleClass("current");
+        })
+        // $(".box").css()
+        // jQuery.css()可以设置css样式也可以查询样式
+        // console.log($(".box").css("width"))
+        // $(".box").css("width",200)
+        // $(".box").animate({
+        //     "width": 200,
+        //     "height":200
+        // },200)
+        // $(".box").hide()
+
+        $(".box").animate({
+            "width": 200,
+            "height": 200
+        }, 200,function(){
+            alert('变小了')
+        })
+
+    </script>
+</body>
+
+</html>
