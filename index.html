@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./images/promotion-app-log.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        .page {
+            max-width: 540px;
+            margin: 0 auto;
+            /* background-color: #fc0ba6; */
+        }
+
+        .header {
+            /* margin: 0 auto; */
+            /* height: 230px; */
+            width: 100%;
+            max-width: 540px;
+            /* background-image: url('./images/banner01.jpg'); */
+            /* background-position: center; */
+            /* background-size: 100% auto;
+            background-position: top; */
+            /* border-radius: 0px 0px 5px 5px; */
+            /* position: relative; */
+        }
+
+        .header img {
+            width: 100%;
+        }
+
+        /* .header::after {
+            content: '';
+            width: 100%;
+            height: 50px;
+            background-color: lightblue;
+            display: block;
+            background-image: url('./images/banner01.jpg');
+            
+            background-size: 100%;
+            background-position: top;
+            background-position-y: -230px;
+            border-radius: 0px 0px 50% 50%;
+            position: absolute;
+            top: 230px;
+        } */
+        .big-nav {
+            max-width: 520px;
+            margin: 10px 10px;
+            /* background-color:white; */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .big-nav ul {
+            height: 80px;
+            display: flex;
+        }
+
+        .big-nav ul li {
+            margin-right: 1px;
+            /* display: flex; */
+            /* background-color: chartreuse; */
+            text-align: center;
+            line-height: 80px;
+            /* display: flex;
+            justify-content: center; */
+            background-size: 60%;
+            background-repeat: no-repeat;
+            color: white;
+            position: relative;
+        }
+
+        .big-nav ul li:last-child {
+            margin-right: 0px;
+        }
+
+        .big-nav ul:nth-child(1) li:nth-child(1) {
+            background-image: url('./images/grid-nav-items-hotel.png');
+
+            background-position: right bottom;
+            background-color: #ff9082;
+            flex: 3;
+        }
+
+        /* 
+        .big-nav ul:nth-child(1) li:nth-child(1) img {
+            width: 60%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+        }
+
+        .big-nav ul:nth-child(1) li:nth-child(1) img {
+            width: 60%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: block;
+            z-index: 1;
+        } */
+
+        .big-nav ul:nth-child(1) li:nth-child(2) {
+            background-image: url('./images/grid-nav-items-minsu.png');
+            background-position: left bottom;
+            background-color: #ff9082;
+            flex: 2;
+        }
+
+        .big-nav ul:nth-child(1) li:nth-child(2) img {
+            width: 60%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+        }
+
+        .big-nav ul:nth-child(1) li:nth-child(3) {
+            background-image: url('./images/grid-nav-items-hot.png');
+            background-size: 100%;
+            background-position: -11px -17px;
+            background-color: #ffc372;
+            flex: 4;
+        }
+
+        .big-nav ul:nth-child(2) li:nth-child(1) {
+            background-image: url('./images/grid-nav-items-flight.png');
+            background-size: 70%;
+            background-position: 50px 28px;
+            background-color: #6ab3f8;
+            flex: 3;
+        }
+
+        .big-nav ul:nth-child(2) li:nth-child(2) {
+            background-image: url('./images/grid-nav-items-train.png');
+            background-size: 60%;
+            background-position: 0px 37px;
+            background-color: #6ab3f8;
+            flex: 2;
+        }
+
+        .big-nav ul:nth-child(2) li:nth-child(3) {
+
+            background-color: #6ab3f8;
+            flex: 2;
+        }
+
+        .big-nav ul:nth-child(2) li:nth-child(4) {
+
+            background-color: #6ab3f8;
+            flex: 2;
+        }
+
+        .big-nav ul:nth-child(3) li:nth-child(1) {
+            background-image: url('./images/grid-nav-items-travel.png');
+            background-size: 70%;
+            background-position: 51px 19px;
+            background-color: #47c492;
+            flex: 3;
+        }
+
+        .big-nav ul:nth-child(3) li:nth-child(2) {
+            background-image: url('./images/grid-nav-items-dingzhi.png');
+            background-size: 70%;
+            background-position: -2px 51px;
+            background-color: #47c492;
+            flex: 2;
+        }
+
+        .big-nav ul:nth-child(3) li:nth-child(3) {
+            background-color: #47c492;
+            flex: 2;
+        }
+
+        .big-nav ul:nth-child(3) li:nth-child(4) {
+            background-color: #47c492;
+            flex: 2;
+        }
+
+        .big-nav ul li span {
+            display: block;
+            z-index: 9;
+        }
+
+        .small-nav {
+            margin: 10px auto;
+            max-width: 520px;
+        }
+
+        .small-nav ul {
+            display: flex;
+        }
+
+        .small-nav ul li {
+            flex: 1;
+            height: 50px;
+            text-align: center;
+            font-size: 12px;
+            /* background-color: wheat; */
+            /* line-height: 70px; */
+        }
+
+        .small-nav ul .icon {
+            /* content: '';
+            display: block; */
+            margin: auto;
+            background-image: url('./images/un_ico_subnav.png');
+            background-position: 0px 0px;
+            background-size: 30px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .small-nav ul:nth-child(1) li:nth-child(2) .icon {
+            background-position: 0px calc(30px*1);
+        }
+
+        .small-nav ul:nth-child(1) li:nth-child(3) .icon {
+            background-position: 0px calc(30px*2);
+        }
+
+        .small-nav ul:nth-child(1) li:nth-child(4) .icon {
+            background-position: 0px calc(30px*3);
+        }
+
+        .small-nav ul:nth-child(1) li:nth-child(5) .icon {
+            background-position: 0px calc(30px*4);
+        }
+
+        .small-nav ul:nth-child(2) li:nth-child(1) .icon {
+            background-position: 0px calc(30px*5);
+        }
+
+        2 .small-nav ul:nth-child(2) li:nth-child(2) .icon {
+            background-position: 0px calc(30px*6);
+        }
+
+        .small-nav ul:nth-child(2) li:nth-child(3) .icon {
+            background-position: 0px calc(30px*7);
+        }
+
+        .small-nav ul:nth-child(2) li:nth-child(4) .icon {
+            background-position: 0px calc(30px*8);
+        }
+
+        .small-nav ul:nth-child(2) li:nth-child(5) .icon {
+            background-position: 0px calc(30px*9);
+        }
+
+        .active {
+            /* background-color: blue; */
+            max-width: 530px;
+            margin: 10px 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .active .hot {
+            flex: 3;
+            /* background-color: chartreuse; */
+            height: 30px;
+            background-size: 100%;
+            background-image: url('./images/un_home_text.png');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .active .guanggao {
+            flex: 1;
+            margin-bottom: 5px;
+            height: 20px;
+            /* background-color: wheat; */
+            background-image: url('./images/icon-gg.png');
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .active .more {
+            flex: 3.5;
+            height: 20px;
+            background-image: linear-gradient(to right, red, #fc0ba6);
+            text-align: center;
+            color: white;
+            line-height: 20px;
+            border-radius: 20px;
+        }
+
+        .active .kongbai {
+            flex: 8;
+        }
+
+        .sale {
+            max-width: 540px;
+            padding: 2px 0px;
+            background-color: #d3d3d3;
+            display: flex;
+        }
+        .sale div{
+            flex: 1;
+            margin-right: 1px;
+        }
+        .sale img{
+            display: block;
+            width: 100%;
+        }
+        .sale div:last-child{
+           margin-right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <img src="./images/banner01.jpg" alt="">
+        </header>
+
+        <section class="big-nav">
+            <ul>
+                <li>
+                    <!-- <img src="./images/grid-nav-items-hotel.png" alt=""> -->
+                    酒店
+                </li>
+                <li>
+                    <!-- <img src="./images/grid-nav-items-minsu.png" alt=""> -->
+                    民宿·客栈</li>
+                <li> 特价·爆款</li>
+            </ul>
+            <ul>
+                <li>机票</li>
+                <li>火车票</li>
+                <li>汽车·船票</li>
+                <li>专车·租车</li>
+            </ul>
+            <ul>
+                <li>旅游</li>
+                <li>高铁游</li>
+                <li>邮轮游</li>
+                <li>定制游</li>
+            </ul>
+
+        </section>
+        <section class="small-nav">
+            <ul>
+                <li>
+                    <div class="icon"></div>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <div class="icon"></div><span>WiFi电话卡</span>
+                </li>
+                <li>
+                    <div class="icon"></div><span>保险·签证</span>
+                </li>
+                <li>
+                    <div class="icon"></div><span>换钞·购物</span>
+                </li>
+                <li>
+                    <div class="icon"></div><span>当地向导</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="icon"></div><span>特价机票</span>
+                </li>
+                <li>
+                    <div class="icon"></div><span>礼品卡</span>
+                </li>
+                <li>
+                    <div class="icon"></div><span>申卡·借钱</span>
+                </li>
+                <li>
+                    <div class="icon"></div><span>旅拍</span>
+                </li>
+                <li>
+                    <div class="icon"></div><span>更多</span>
+                </li>
+            </ul>
+        </section>
+        <section class="active">
+            <div class="hot"></div>
+            <div class="guanggao"></div>
+            <div class="kongbai"></div>
+            <div class="more">获取更多福利></div>
+        </section>
+        <section class="sale">
+            <div><img src="./images/salesImg01.png" alt=""></div>
+            <div><img src="./images/salesImg02.png" alt=""></div>
+        </section>
+    </div>
+</body>
+
+</html>
